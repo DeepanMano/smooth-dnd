@@ -15,14 +15,14 @@ module.exports = {
     exports: 'named',
   },
 	plugins: [
+		commonjs({
+			extensions
+		}),
     babel({
 			extensions,
       include: ['./index.ts', 'src/**/*'],
       exclude: 'node_modules/**',
     }),
-		commonjs({
-			extensions
-		}),
     uglify()
   ],
 };
